@@ -11,6 +11,7 @@ public class FirstTest {
     public void firstTest() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
         WebDriver driver = new ChromeDriver();
+
         driver.get("https://www.facebook.com");
         driver.manage().window().maximize();
 
