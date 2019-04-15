@@ -19,6 +19,7 @@ public class WelcomePage extends BasePage{
     }
 
     public String getWelcomePageTitle(){
+        log.debug("getWelcomePageTitle()");
         return welcomePageTitle.getText();
     }
 
@@ -27,8 +28,9 @@ public class WelcomePage extends BasePage{
     }
 
     public LoginPage clickOnLogoutButton(){
+        log.debug("clickOnLogoutButton()");
         waitForElementToBeVisible(logoutButton);
         logoutButton.click();
-        return new LoginPage();
+        return new LoginPage(driver); // da bi drajver uvek imao aktuelne web elemente ako se nesto promeni
     }
 }

@@ -17,7 +17,7 @@ public class LoginPage extends BasePage{
     @FindBy(css = ".btn-primary")
     private WebElement loginButton;
 
-    @FindBy(xpath = "//div[@class = 'alert alert-success']")
+    @FindBy(xpath = "//div/div[@class = 'panel-body']/div[@class = 'alert alert-success']")
     private  WebElement alertSuccessMessageLogout;
 
     private String expectedLogotMessage = "You have been logged out.";
@@ -27,12 +27,18 @@ public class LoginPage extends BasePage{
         super(WebDriverFactory.getDriver());
     }
 
+    public LoginPage(WebDriver driver){
+        super(driver);
+    }
+
     public LoginPage openAs(String url){
+        log.debug("openAs()");
         driver.get(url);
         return this;
     }
 
     public LoginPage typeUsername(String username){
+        log.debug("typeUsername()");
         waitForElementToBeVisible(usernameTextField);
         usernameTextField.clear();
         usernameTextField.sendKeys(username);
@@ -40,6 +46,7 @@ public class LoginPage extends BasePage{
     }
 
     public LoginPage typePassword(String password){
+        log.debug("typePassword()");
         waitForElementToBeVisible(passwordTextField);
         passwordTextField.clear();
         passwordTextField.sendKeys(password);
@@ -47,22 +54,26 @@ public class LoginPage extends BasePage{
     }
 
     public WelcomePage clickOnLogin(){ //navigacione metode
+        log.debug("clickOnLogin()");
         waitForElementToBeVisible(loginButton);
         loginButton.click();
         return new WelcomePage(driver);
     }
 
     public WelcomePage login(String username, String password){
+        log.debug("login as " +username);
         typeUsername(username);
         typePassword(password);
         return clickOnLogin();
     }
 
     public String getExpectedWelcomePageTitle(){
+        log.debug("getExpectedWelcomePageTitle()");
         return  expectedLogotMessage;
     }
 
     public String getAlertSuccessMessageLogout(){
+        log.debug("getAlertSuccessMessageLogout");
         waitForElementToBeVisible(alertSuccessMessageLogout);
         return alertSuccessMessageLogout.getText();
     }
