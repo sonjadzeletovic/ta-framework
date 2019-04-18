@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class LoginLogoutTest {
 
-    @Test
+    @Test (groups = {"heartbeat"})
     public void testLoginLogout() {
 
         String username = "user";

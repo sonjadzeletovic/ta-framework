@@ -21,7 +21,7 @@ public class BasePage {
     public BasePage(WebDriver driver){
 
         this.driver = driver;
-        log = LogFactory.getLog(this.getClass());
+        log = LogFactory.getLog(this.getClass()); // ovde ga stavljas da bi mogli svi da ga koriste
         PageFactory.initElements(driver,this); // sve varijable se refresh pri novom pozivu, uzima
         // naziv varijable i to trazi po strani
     }
