@@ -1,6 +1,6 @@
-package com.test.workshop.testTA;
+package com.test.workshop.testta;
 
-import com.test.workshop.testTA.webDriver.WebDriverFactory;
+import com.test.workshop.testta.webDriver.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

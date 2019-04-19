@@ -1,6 +1,5 @@
-package com.test.workshop.testTA;
+package com.test.workshop.testta;
 
-import com.test.workshop.testTA.utilis.Time;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static com.test.workshop.testTA.utilis.Time.SHORT;
+import static com.test.workshop.testta.utilis.Time.SHORT;
 
 public class BasePage {
 

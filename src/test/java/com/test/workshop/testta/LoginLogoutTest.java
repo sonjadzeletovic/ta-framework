@@ -1,9 +1,5 @@
-package com.test.workshop.TestTA;
+package com.test.workshop.testta;
 
-import com.test.workshop.testTA.LoginPage;
-import com.test.workshop.testTA.WelcomePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

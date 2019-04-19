@@ -1,4 +1,4 @@
-package com.test.workshop.testTA.utilis;
+package com.test.workshop.testta.utilis;
 
 public class Time {
 

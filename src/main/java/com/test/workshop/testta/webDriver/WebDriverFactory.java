@@ -1,4 +1,4 @@
-package com.test.workshop.testTA.webDriver;
+package com.test.workshop.testta.webDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -18,13 +18,12 @@ public class WebDriverFactory {
   //podrska za 4 browser-a
         WebDriver driver = null;
         String browser = System.getProperty("browser");
-        System.out.println("xxx"+browser);
         String chromeBrowser = "chrome";
         String firefoxBrowser = "firefox";
         String edgeBrowser = "edge";
         String ieBrowser = "explorer";
 
-      /*  WebDriverManager.chromedriver().setup(); //storuje u maven putanji
+       /* WebDriverManager.chromedriver().setup(); //storuje u maven putanji
         driver = new ChromeDriver();*/
         if (browser.equalsIgnoreCase(chromeBrowser)) {
             WebDriverManager.chromedriver().setup(); //storuje u maven putanji

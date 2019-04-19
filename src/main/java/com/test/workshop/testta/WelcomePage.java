@@ -1,4 +1,4 @@
-package com.test.workshop.testTA;
+package com.test.workshop.testta;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
